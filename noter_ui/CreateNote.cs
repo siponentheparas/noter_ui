@@ -33,6 +33,10 @@ namespace noter_ui
                 MessageBox.Show("Tämä muistiinpano on jo olemassa");
                 return;
             }
+            if (!File.Exists(txtName.Text))
+            {
+                File.Delete(name + ".txt");
+            }
             using (StreamWriter sw = File.CreateText(txtName.Text + ".txt"))
             {
                 sw.WriteLine(txtNote.Text);
@@ -48,7 +52,7 @@ namespace noter_ui
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (File.Exists(txtName.Text + ".txt") && name == "")
+            if (File.Exists(txtName.Text + ".txt") && name != txtName.Text)
             {
                 lbExists.Text = "Muistiinpano on jo olemassa";
             }

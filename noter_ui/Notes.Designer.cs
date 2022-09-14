@@ -34,6 +34,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox
@@ -98,11 +99,22 @@
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(12, 146);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(86, 23);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Takaisin";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Notes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
@@ -127,5 +139,6 @@
         private Button btnDelete;
         private Label label1;
         private Button btnOpen;
+        private Button btnBack;
     }
 }

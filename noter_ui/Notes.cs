@@ -40,6 +40,25 @@ namespace noter_ui
             var confirmResult = MessageBox.Show("Haluatko poistaa muistiinpanon: " + listBox.Items[listBox.SelectedIndex].ToString(),
                                 "Poista muistiinpano",
                                 MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                File.Delete(listBox.Items[listBox.SelectedIndex].ToString() + ".txt");
+                MessageBox.Show("Muistiinpano poistettu");
+                listBox.Items.Clear();
+                var notes = Directory.EnumerateFiles(Directory.GetCurrentDirectory());
+                foreach (string note in notes)
+                {
+                    listBox.Items.Add(Path.GetFileNameWithoutExtension(note));
+                }
+                listBox.SelectedIndex = -1;
+                btnDelete.Enabled = false;
+                btnEdit.Enabled = false;
+                btnOpen.Enabled = false;
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -59,6 +78,11 @@ namespace noter_ui
             OpenNote on = new(name, note);
             this.Hide();
             on.ShowDialog();
+            this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }
