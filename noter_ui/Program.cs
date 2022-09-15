@@ -1,6 +1,7 @@
-namespace noter_ui
-{
-    internal static class Program
+using noter_ui;
+using System.Security.Cryptography.X509Certificates;
+
+internal static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -20,4 +21,3 @@ namespace noter_ui
             Application.Run(new Mode());
         }
     }
-}
