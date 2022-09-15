@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lbSearch = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox
@@ -109,11 +111,30 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lbSearch
+            // 
+            this.lbSearch.AutoSize = true;
+            this.lbSearch.Location = new System.Drawing.Point(147, 154);
+            this.lbSearch.Name = "lbSearch";
+            this.lbSearch.Size = new System.Drawing.Size(28, 15);
+            this.lbSearch.TabIndex = 6;
+            this.lbSearch.Text = "Hae";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(181, 151);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(191, 23);
+            this.txtSearch.TabIndex = 7;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
             // Notes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lbSearch);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.label1);
@@ -140,5 +161,7 @@
         private Label label1;
         private Button btnOpen;
         private Button btnBack;
+        private Label lbSearch;
+        private TextBox txtSearch;
     }
 }

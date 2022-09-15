@@ -85,5 +85,23 @@ namespace noter_ui
         {
             this.Close();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            listBox.SelectedIndex = -1;
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
+            btnOpen.Enabled = false;
+            listBox.Items.Clear();
+            var notes = Directory.EnumerateFiles(Directory.GetCurrentDirectory());
+            foreach (string note in notes)
+            {
+                string name = Path.GetFileNameWithoutExtension(note);
+                if (name.Contains(txtSearch.Text))
+                {
+                    listBox.Items.Add(name);
+                }
+            }
+        }
     }
 }
