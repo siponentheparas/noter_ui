@@ -44,7 +44,7 @@
             this.listBox.Location = new System.Drawing.Point(12, 212);
             this.listBox.Name = "listBox";
             this.listBox.Size = new System.Drawing.Size(360, 139);
-            this.listBox.TabIndex = 0;
+            this.listBox.TabIndex = 5;
             this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // lbName
@@ -63,7 +63,7 @@
             this.btnEdit.Location = new System.Drawing.Point(12, 80);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(86, 51);
-            this.btnEdit.TabIndex = 2;
+            this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Muokkaa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -85,7 +85,7 @@
             this.label1.Location = new System.Drawing.Point(147, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 15);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Muistiinpano";
             // 
             // btnOpen
@@ -94,7 +94,7 @@
             this.btnOpen.Location = new System.Drawing.Point(147, 83);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(86, 51);
-            this.btnOpen.TabIndex = 5;
+            this.btnOpen.TabIndex = 2;
             this.btnOpen.Text = "Avaa";
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
@@ -104,7 +104,7 @@
             this.btnBack.Location = new System.Drawing.Point(12, 146);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(86, 23);
-            this.btnBack.TabIndex = 6;
+            this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Takaisin";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);

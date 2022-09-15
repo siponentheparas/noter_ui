@@ -51,7 +51,7 @@
             this.txtName.Location = new System.Drawing.Point(129, 6);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(161, 23);
-            this.txtName.TabIndex = 2;
+            this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label2
@@ -60,7 +60,7 @@
             this.label2.Location = new System.Drawing.Point(38, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 15);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Muistiinpano";
             // 
             // btnSave
@@ -89,7 +89,7 @@
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(728, 267);
-            this.txtNote.TabIndex = 6;
+            this.txtNote.TabIndex = 3;
             // 
             // lbExists
             // 
